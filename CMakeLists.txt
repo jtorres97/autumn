@@ -10,6 +10,7 @@ add_executable("${PROJECT_NAME}" "${AUTUMN_SRC}")
 set_property(TARGET "${PROJECT_NAME}" PROPERTY CXX_STANDARD 17)
 
 target_include_directories("${PROJECT_NAME}" PRIVATE "${CMAKE_SOURCE_DIR}/src/Autumn")
+target_include_directories("${PROJECT_NAME}" PRIVATE "${CMAKE_SOURCE_DIR}/src/Sandbox")
 target_include_directories("${PROJECT_NAME}" PRIVATE "${CMAKE_SOURCE_DIR}/src/Vendor")
 
 if (MSVC)
