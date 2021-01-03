@@ -11,10 +11,10 @@ namespace Autumn
 	public:
 		WindowResizeEvent(unsigned int width, unsigned int height) : m_width(width), m_height(height) {}
 
-		unsigned int GetWidth() const { return m_width; }
-		unsigned int GetHeight() const { return m_height; }
+		[[nodiscard]] unsigned int GetWidth() const { return m_width; }
+		[[nodiscard]] unsigned int GetHeight() const { return m_height; }
 
-		std::string ToString() const override
+		[[nodiscard]] std::string ToString() const override
 		{
 			std::stringstream ss;
 			ss << "WindowResizeEvent: " << m_width << ", " << m_height;
