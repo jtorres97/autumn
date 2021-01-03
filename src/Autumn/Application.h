@@ -1,5 +1,4 @@
-#ifndef AUTUMN_CLASS_APPLICATION
-#define AUTUMN_CLASS_APPLICATION
+#pragma once
 
 namespace Autumn
 {
@@ -15,5 +14,3 @@ namespace Autumn
 
 	Application* CreateApplication();
 }
-
-#endif

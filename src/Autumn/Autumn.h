@@ -1,6 +1,3 @@
-#ifndef AUTUMN_GLOBAL_HEADER
-#define AUTUMN_GLOBAL_HEADER
+#pragma once
 
 #include "Application.h"
-
-#endif
