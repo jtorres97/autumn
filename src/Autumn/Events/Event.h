@@ -5,6 +5,7 @@
 #include "Core/Core.h"
 
 #include <string>
+#include <ostream>
 
 namespace Autumn
 {
