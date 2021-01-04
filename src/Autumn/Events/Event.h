@@ -5,6 +5,7 @@
 #include "Core/Core.h"
 
 #include <string>
+#include <ostream>
 
 namespace Autumn
 {
@@ -38,7 +39,7 @@ namespace Autumn
 	};
 
 #define AUTUMN_EVENT_CLASS_TYPE(type)                                                                                                         \
-	[[nodiscard]] static EventType GetStaticType() { return EventType::##type; }														      \
+	[[nodiscard]] static EventType GetStaticType() { return EventType::type; }																  \
 	[[nodiscard]] virtual EventType GetEventType() const override { return GetStaticType(); }                                                 \
 	[[nodiscard]] virtual const char* GetName() const override { return #type; }
 

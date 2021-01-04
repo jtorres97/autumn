@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Window.h"
+
 namespace Autumn
 {
 	class Application
@@ -8,8 +10,11 @@ namespace Autumn
 		Application();
 		virtual ~Application();
 
-		virtual void Run() = 0;
+		virtual void Run();
+		
 	private:
+		std::unique_ptr<Window> m_window;
+		bool m_running = true;
 	};
 
 	Application* CreateApplication();

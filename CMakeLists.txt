@@ -20,4 +20,8 @@ elseif()
     add_compile_options(-Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic)
 endif()
 
-target_link_libraries("${PROJECT_NAME}" PRIVATE ${CONAN_LIBS})
+# Find OpenGL
+find_package(OpenGL)
+
+set_target_properties("${PROJECT_NAME}" PROPERTIES LINK_FLAGS ${CONAN_EXE_LINKER_FLAGS})
+target_link_libraries("${PROJECT_NAME}" PRIVATE ${CONAN_LIBS} OpenGL::GL) 
