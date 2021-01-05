@@ -22,9 +22,9 @@ namespace Autumn
 	class KeyPressedEvent : public KeyEvent
 	{
 	public:
-		KeyPressedEvent(int keyCode, int repeatCount) : KeyEvent(keyCode), m_repeatCount(repeatCount) {}
+		KeyPressedEvent(int keyCode, unsigned int repeatCount) : KeyEvent(keyCode), m_repeatCount(repeatCount) {}
 
-		[[nodiscard]] int GetRepeatCount() const { return m_repeatCount; }
+		[[nodiscard]] unsigned int GetRepeatCount() const { return m_repeatCount; }
 		[[nodiscard]] std::string ToString() const override
 		{
 			std::stringstream ss;
