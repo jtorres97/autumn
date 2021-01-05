@@ -2,7 +2,9 @@
 
 #include "Logger.h"
 
-#define BIT(x) (1 << x)
+#define AUTUMN_BIT(x) (1 << x)
+
+#define AUTUMN_EVENT_BIND_FUNCTION(func) std::bind(&func, this, std::placeholders::_1)
 
 #ifndef NDEBUG
 // Defining platform specific debug break

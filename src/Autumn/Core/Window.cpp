@@ -1,4 +1,5 @@
 #include "Window.h"
+#include "Events/ApplicationEvent.h"
 
 namespace Autumn
 {
@@ -53,6 +54,17 @@ namespace Autumn
 		glfwSetWindowUserPointer(m_window, &m_properties);
 
 		SetVsync(props.vsync);
+
+		// GLFW callbacks
+		glfwSetWindowSizeCallback(m_window, [](GLFWwindow* window, int width, int height) 
+		{
+			auto* const data = static_cast<WindowProperties*>(glfwGetWindowUserPointer(window));
+			data->width = width;
+			data->height = height;
+
+			WindowResizeEvent resize{ static_cast<unsigned int>(width), static_cast<unsigned int>(height) };
+			data->callback(resize);
+		});
 	}
 
 	void Window::Close()
