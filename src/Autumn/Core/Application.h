@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Window.h"
+#include "Events/ApplicationEvent.h"
 
 namespace Autumn
 {
@@ -10,9 +11,12 @@ namespace Autumn
 		Application();
 		virtual ~Application();
 
-		virtual void Run();
+		void Run();
+		void OnEvent(Event& event);
 		
 	private:
+		bool OnWindowClose(WindowCloseEvent& event);
+		
 		std::unique_ptr<Window> m_window;
 		bool m_running = true;
 	};

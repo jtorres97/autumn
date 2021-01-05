@@ -31,11 +31,11 @@ namespace Autumn
 	enum EventCategory
 	{
 		None = 0,
-		EventCategoryApplication = BIT(0),
-		EventCategoryInput = BIT(1),
-		EventCategoryKeyboard = BIT(2),
-		EventCategoryMouse = BIT(3),
-		EventCategoryMouseButton = BIT(4)
+		EventCategoryApplication = AUTUMN_BIT(0),
+		EventCategoryInput = AUTUMN_BIT(1),
+		EventCategoryKeyboard = AUTUMN_BIT(2),
+		EventCategoryMouse = AUTUMN_BIT(3),
+		EventCategoryMouseButton = AUTUMN_BIT(4)
 	};
 
 #define AUTUMN_EVENT_CLASS_TYPE(type)                                                                                                         \

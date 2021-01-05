@@ -19,6 +19,7 @@ namespace Autumn
 		unsigned int height;
 		bool vsync;
 		EventCallbackFunc callback;
+		unsigned int keyRepeats;
 	};
 
 	class Window
